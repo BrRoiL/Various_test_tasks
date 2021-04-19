@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Задание 6</title>
+
+		<link rel="stylesheet" href="assets/css/information_style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script src="script.js"></script>
+		<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.6.4'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(
+				function (){
+					$(".authorization_input_name").on("input keyup",
+						function(){
+							if($(this).val() != ''){
+								$(".authorization_input_label").css("color", "transparent");
+							}
+							else{
+								$(".authorization_input_label").css("color", "#d2d4d6");
+							}
+						}
+					);
+
+					$(".authorization_button1").click(
+						function(){
+							$(".city_name_text").text($(".authorization_input_name").val());
+						}
+					);
+
+					$(".menu_logo").click(
+						function(){
+							if($(window).width() <= 320)
+							{
+								$(".menu_nav").slideToggle(300,
+									function (){
+										if ($(this).is(":hidden")){
+											$(".header").css("margin-bottom", "0px");
+										}
+										else{
+											$(".menu_nav").css("margin-bottom", "20px");
+											$(".header").css("margin-bottom", "240px");
+										}
+									}
+								);
+							}
+							return false;
+						}
+					);
+				}
+			);
+		</script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="conteiner">
+					<div class="header_inner">
+						<div class="header_logo">ЛОГО</div>
+						<nav class="header_nav">
+							<a class="header_nav_link" href="index.html">Задание 1</a>
+							<a class="header_nav_link" href="authorization.html">Задание 2</a>
+							<a class="header_nav_link" href="questions.html">Задание 3</a>
+							<a class="header_nav_link" href="random.php">Задание 4</a>
+							<a class="header_nav_link" href="breadcrumbs.php">Задание 5</a>
+							<a class="header_nav_link" href="#">Задание 6</a>
+						</nav>
+						<div class="user_logo"></div>
+						<div class="user_text">Привет Аноним!</div>
+						<div class="menu_logo"></div>
+					</div>
+
+					<nav class="menu_nav" style="display: none;">
+						<a class="menu_nav_link" href="index.html">Задание 1</a>
+						<a class="menu_nav_link" href="authorization.html">Задание 2</a>
+						<a class="menu_nav_link" href="questions.html">Задание 3</a>
+						<a class="menu_nav_link" href="random.php">Задание 4</a>
+						<a class="menu_nav_link" href="breadcrumbs.php">Задание 5</a>
+						<a class="menu_nav_link" href="#">Задание 6</a>
+					</nav>
+
+					<div class="authorization">
+						<div class="authorization_text">Город
+							<div class="city_informations">
+								<div class="city_informations2">
+									<div class="city_name">Название города: <div class="city_name_text"></div></div>
+									<div class="city_population">Размер населения:</div>
+									<div class="city_temperature">Температура в городе:</div>
+								</div>
+							</div>
+						</div>
+						<div class="authorization_input_group">
+							<input type="text" class="authorization_input_name" name="name"></input >
+							<label class="authorization_input_label">Ваше имя</label>
+						</div>
+
+						<div class="authorization_button1">ПОКАЗАТЬ</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="conteiner">
+					<nav class="footer_nav">
+						<div class="foote_logo">ЛОГО</div>
+						<div class="author">Выполнил Баранов Р.Л.</div>
+						<div class="phone_number">тел. +7 919 138 15 04</div>
+					</nav>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

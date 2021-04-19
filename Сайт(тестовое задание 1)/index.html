@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Задание 1</title>
+
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(
+				function (){
+					$(".content_nav_link").hover(
+						function(){
+							$(this).parent().css("background", "#66ccff");
+							$(this).css("background", "white");
+						},
+						function(){
+							$(this).parent().css("background", "white");
+							$(this).css("background", "#ff6666");
+						}
+					);
+
+					$(".menu_logo").click(
+						function(){
+							if($(window).width() <= 320)
+							{
+								$(".menu_nav").slideToggle(300,
+									function (){
+										if ($(this).is(":hidden")){
+											$(".header").css("margin-bottom", "40px");
+										}
+										else{
+											$(".header").css("margin-bottom", "265px");
+											$(".background_banner").css("top", "19px");
+											$(".background_banner").css("left", "-15px");
+											$(".text_banner").css("top", "11.5%");
+											$(".text_banner").css("left", "3.7%");
+										}
+									}
+								);
+							}
+							if($(window).width() > 320 && $(window).width() <= 640)
+							{
+								$(".menu_nav").slideToggle(300,
+									function (){
+										if ($(this).is(":hidden")){
+											$(".header").css("margin-bottom", "40px");
+										}
+										else{
+											$(".header").css("margin-bottom", "80px");
+										}
+									}
+								);
+							}
+							return false;
+						}
+					);
+				}
+			);
+		</script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="conteiner">
+					<div class="header_inner">
+						<div class="header_logo">ЛОГО</div>
+						<nav class="header_nav">
+							<a class="header_nav_link" href="#">Задание 1</a>
+							<a class="header_nav_link" href="authorization.html">Задание 2</a>
+							<a class="header_nav_link" href="questions.html">Задание 3</a>
+							<a class="header_nav_link" href="random.php">Задание 4</a>
+							<a class="header_nav_link" href="breadcrumbs.php">Задание 5</a>
+							<a class="header_nav_link" href="information.html">Задание 6</a>
+						</nav>
+						<div class="user_logo"></div>
+						<div class="user_text">Привет Аноним!</div>
+						<div class="menu_logo"></div>
+					</div>
+
+					<nav class="menu_nav" style="display: none;">
+						<a class="menu_nav_link" href="#">Задание 1</a>
+						<a class="menu_nav_link" href="authorization.html">Задание 2</a>
+						<a class="menu_nav_link" href="questions.html">Задание 3</a>
+						<a class="menu_nav_link" href="random.php">Задание 4</a>
+						<a class="menu_nav_link" href="breadcrumbs.php">Задание 5</a>
+						<a class="menu_nav_link" href="information.html">Задание 6</a>
+					</nav>
+
+					<div class="background_banner">
+						<div class="text_banner">
+							<font id="text_header">Стажировка это круто!</font>
+							<p>
+							— работа в команде;<br>
+							— реальные проекты;<br>
+							— оплачиваемая стажировка;<br>
+							— перспективная отросль;</p>
+							<a class="btn_detail" href="#">ПОДРОБНЕЕ</a>
+						</div>
+					<div class="banner_image"></div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="conteiner">
+					<div class="text_content">Свободные вакансии</div>
+					<nav class="content_nav">
+						<div class="application_background">
+							<p class="application_name">Программист</p>
+							<div class="application_image0"></div>
+							<p class="application_text">Верстка макета, интеграция<br>сайта, програмирование</p>
+							<a class="content_nav_link" href="#">Оставить заявку</a>
+						</div>
+						<div class="application_background">
+							<p class="application_name">Программист</p>
+							<div class="application_image1"></div>
+							<p class="application_text">Верстка макета, интеграция<br>сайта, програмирование</p>
+							<a class="content_nav_link" href="#">Оставить заявку</a>
+						</div>
+						<div class="application_background">
+							<p class="application_name">Программист</p>
+							<div class="application_image2"></div>
+							<p class="application_text">Верстка макета, интеграция<br>сайта, програмирование</p>
+							<a class="content_nav_link" href="#">Оставить заявку</a>
+						</div>
+						<div class="application_background">
+							<p class="application_name">Программист</p>
+							<div class="application_image3"></div>
+							<p class="application_text">Верстка макета, интеграция<br>сайта, програмирование</p>
+							<a class="content_nav_link" href="#">Оставить заявку</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="content_info">
+				<div class="conteiner">
+					<nav class="offer_nav">
+						<div class="offer_background">
+							<p class="offer_caption">Мы готовы вам предложить:</p>
+							<ul class="offer_text">
+								<li>Обучение под руководством опытного наставника;</li>
+								<li>Дружелюбный коллектив;</li>
+								<li>Возможность профессионального и карьерного роста в ИТ-компании;</li>
+								<li>Официальное трудоустройство.</li>
+							</ul>
+						</div>
+						<div class="offer_background">
+							<p class="offer_caption">Мы ждем от Вас:</p>
+							<ul class="offer_text">
+								<li>Желание и умения обучаться, упорство и целеустремленность;</li>
+								<li>Базовы знания PHP, JavaScript, MySQL, HTML и CSS;</li>
+								<li>Нацеленность на развитие и долгосрочное сотрудничество;</li>
+								<li>Имеешь опыт веб-разработки.</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="conteiner">
+					<nav class="footer_nav">
+						<div class="foote_logo">ЛОГО</div>
+						<div class="author">Выполнил Баранов Р.Л.</div>
+						<div class="phone_number">тел. +7 919 138 15 04</div>
+					</nav>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

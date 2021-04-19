@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Задание 3</title>
+
+		<link rel="stylesheet" href="assets/css/questions_style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(
+				function (){
+					$(".authorization_input_name").blur(
+						function(){
+							if($(this).val() != ''){
+								$(".authorization_input_label").css("color", "transparent");
+							}
+							else{
+								$(".authorization_input_label").css("color", "#d2d4d6");
+							}
+						}
+					);
+
+					$(".questions_nav_text_caption").click(
+						function(){
+							$(this).children(".questions_nav_text").slideToggle(300);
+						}
+					);
+
+					$(".menu_logo").click(
+						function(){
+							if($(window).width() <= 320)
+							{
+								$(".menu_nav").slideToggle(300,
+									function (){
+										if ($(this).is(":hidden")){
+											$(".header").css("margin-bottom", "0px");
+										}
+										else{
+											$(".menu_nav").css("margin-bottom", "20px");
+										}
+									}
+								);
+							}
+							return false;
+						}
+					);
+				}
+			);
+		</script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="conteiner">
+					<div class="header_inner">
+						<div class="header_logo">ЛОГО</div>
+						<nav class="header_nav">
+							<a class="header_nav_link" href="index.html">Задание 1</a>
+							<a class="header_nav_link" href="authorization.html">Задание 2</a>
+							<a class="header_nav_link" href="#">Задание 3</a>
+							<a class="header_nav_link" href="random.php">Задание 4</a>
+							<a class="header_nav_link" href="breadcrumbs.php">Задание 5</a>
+							<a class="header_nav_link" href="information.html">Задание 6</a>
+						</nav>
+						<div class="user_logo"></div>
+						<div class="user_text">Привет Аноним!</div>
+						<div class="menu_logo"></div>
+					</div>
+
+					<nav class="menu_nav" style="display: none;">
+						<a class="menu_nav_link" href="index.html">Задание 1</a>
+						<a class="menu_nav_link" href="authorization.html">Задание 2</a>
+						<a class="menu_nav_link" href="#">Задание 3</a>
+						<a class="menu_nav_link" href="random.php">Задание 4</a>
+						<a class="menu_nav_link" href="breadcrumbs.php">Задание 5</a>
+						<a class="menu_nav_link" href="information.html">Задание 6</a>
+					</nav>
+
+					<nav class="questions_nav">
+						<p class="questions_nav_caption">Популярные вопросы</p>
+
+						<div class="questions_nav_text_caption"><span>А вы вообще в курсе, что большой палец и мизинец одного размера?</span>
+							<p class="questions_nav_text">
+								Бритые ноги обеспечивали более свободное плавание. Длинная шерсть на груди, защищала органы от переохлаждения. Помпон на кончике хвоста защищал от колючек кустов. Таким образом консультация с широким активом в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.
+							</p>
+						</div>
+						<div class="questions_nav_text_caption"><span>А Вас не настораживает фраза жены: «Я наложила, иди поешь, пока горячеею..»?</span></div>
+						<div class="questions_nav_text_caption"><span>В пупок входит 8 половинок арахиса. А как проходит ваше весёлое лето?</span></div>
+						<div class="questions_nav_text_caption"><span>Почему пьяный мужик с перегаром в маршрутке всегда садится именно ко мне?</span></div>
+						<div class="questions_nav_text_caption"><span>Интересно, а как жарят картошку перфекционисты? Идеально укладывая и переворачивая каждый кусочек, или все таки сваливают в кучу и жарят?</span></div>
+						<div class="questions_nav_text_caption"><span>Забыла встряхнуть сок перед употреблением сколько мне осталось жить?</div>
+						<div class="questions_nav_text_caption"><span>Почему собачки должны ездить в транспорте в наморднике. А бешеные бабки - нет?</span></div>
+						<div class="questions_nav_text_caption"><span>Имеет ли право нотариус тыкать меня лицом в документы, если я пять раз расписался не в том месте?</span></div>
+					</nav>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="conteiner">
+					<nav class="footer_nav">
+						<div class="foote_logo">ЛОГО</div>
+						<div class="author">Выполнил Баранов Р.Л.</div>
+						<div class="phone_number">тел. +7 919 138 15 04</div>
+					</nav>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
