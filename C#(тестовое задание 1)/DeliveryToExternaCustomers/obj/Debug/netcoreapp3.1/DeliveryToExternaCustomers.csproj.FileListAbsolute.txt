@@ -1,0 +1,8 @@
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\bin\Debug\netcoreapp3.1\DeliveryToExternaCustomers.deps.json
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\bin\Debug\netcoreapp3.1\DeliveryToExternaCustomers.dll
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\bin\Debug\netcoreapp3.1\DeliveryToExternaCustomers.pdb
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers.AssemblyInfoInputs.cache
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers.AssemblyInfo.cs
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers.csproj.CoreCompileInputs.cache
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers.dll
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers.pdb

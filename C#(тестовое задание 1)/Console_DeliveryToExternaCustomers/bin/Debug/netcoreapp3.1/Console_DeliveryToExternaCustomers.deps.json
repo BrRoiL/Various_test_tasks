@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Console_DeliveryToExternaCustomers/1.0.0": {
+        "dependencies": {
+          "DeliveryToExternaCustomers": "1.0.0"
+        },
+        "runtime": {
+          "Console_DeliveryToExternaCustomers.dll": {}
+        }
+      },
+      "DeliveryToExternaCustomers/1.0.0": {
+        "runtime": {
+          "DeliveryToExternaCustomers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Console_DeliveryToExternaCustomers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DeliveryToExternaCustomers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

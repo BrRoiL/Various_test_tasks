@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DeliveryToExternaCustomers_Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/DeliveryToExternaCustomers_Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DeliveryToExternaCustomers_Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DeliveryToExternaCustomers_Lib/1.0.0": {
+      "type": "project",
+      "path": "../DeliveryToExternaCustomers/DeliveryToExternaCustomers_Lib.csproj",
+      "msbuildProject": "../DeliveryToExternaCustomers/DeliveryToExternaCustomers_Lib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "DeliveryToExternaCustomers_Lib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\baran\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\baran\\source\\repos\\Console_DeliveryToExternaCustomers\\Console_DeliveryToExternaCustomers\\DeliveryToExternaCustomers_Console.csproj",
+      "projectName": "DeliveryToExternaCustomers_Console",
+      "projectPath": "C:\\Users\\baran\\source\\repos\\Console_DeliveryToExternaCustomers\\Console_DeliveryToExternaCustomers\\DeliveryToExternaCustomers_Console.csproj",
+      "packagesPath": "C:\\Users\\baran\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\baran\\source\\repos\\Console_DeliveryToExternaCustomers\\Console_DeliveryToExternaCustomers\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\baran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "C:\\Users\\baran\\source\\repos\\Console_DeliveryToExternaCustomers\\DeliveryToExternaCustomers\\DeliveryToExternaCustomers_Lib.csproj": {
+              "projectPath": "C:\\Users\\baran\\source\\repos\\Console_DeliveryToExternaCustomers\\DeliveryToExternaCustomers\\DeliveryToExternaCustomers_Lib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

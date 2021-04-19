@@ -1,0 +1,9 @@
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\bin\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.deps.json
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\bin\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.dll
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\bin\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.pdb
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.AssemblyInfoInputs.cache
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.AssemblyInfo.cs
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.csproj.CoreCompileInputs.cache
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.dll
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.pdb
+C:\Users\baran\source\repos\Console_DeliveryToExternaCustomers\DeliveryToExternaCustomers\obj\Debug\netcoreapp3.1\DeliveryToExternaCustomers_Lib.csprojAssemblyReference.cache
