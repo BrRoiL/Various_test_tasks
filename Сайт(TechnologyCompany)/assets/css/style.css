@@ -1,0 +1,178 @@
+/*Стандартизация*/
+body {
+	margin: 0 auto;
+	cursor: default;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 1920px;
+	height: 1080px;
+	background:url(../images/background.png) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.vector_smart_object {
+	height: 100%;
+	margin:0 auto;
+	background:url(../images/vector_smart_object.png) center no-repeat;
+	background-size: auto;
+}
+
+.your_image_here {
+	height: 100%;
+	margin:0 auto;
+	background:url(../images/your_image_here.png) center no-repeat;
+	background-size: auto;
+	background-position-x: 650px;
+	background-position-y: bottom;
+}
+
+.header {
+	display: flex;
+	position: relative;
+}
+
+.navigation_group {
+	display: flex;
+	position: relative;
+    top: 32px;
+    margin-left: 1015px;
+}
+
+.navigation_bar {
+	cursor: pointer;
+	align-self: center;
+	margin-right: 71px;
+	font-size: 24px;
+	color: white;
+	font-family:"Montserrat", sans-serif;
+	font-weight: 600;
+}
+
+#logo {
+	width: 144px;
+	height: 123px;
+	background:url(../images/logo.png) center no-repeat;
+	background-size: contain;
+
+	position: relative;
+	left: 123px;
+	top: 46px;
+}
+
+
+.content {
+	display: flex;
+	margin-top: 192px;
+    margin-left: 120px;
+    letter-spacing: 4px;
+}
+
+.subtittle {
+	font-size: 42px;
+	color: white;
+	font-family:"Montserrat", sans-serif;
+	font-weight: 600;
+}
+
+.subtittle_title {
+	font-size: 94px;
+	color: white;
+	font-family:"Montserrat", sans-serif;
+	font-weight: 900;
+	letter-spacing: 8px;
+	line-height: 103px;
+
+    position: relative;
+    top: 4px;
+}
+
+.button_buy {
+	display: flex;
+	margin-top: 42px;
+	font-size: 32px;
+	color: white;
+	font-family:"Montserrat", sans-serif;
+	font-weight: 600;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.button_image {
+	width:  36px;
+	height: 36px;
+	background:url(../images/button_image.png) center no-repeat;
+
+	margin-left: 20px;
+}
+
+.discount {
+	margin-left: 586px;
+    margin-top: 86px;
+    font-size: 42px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-align: right;
+    letter-spacing: 2.5px;
+}
+
+.discount_text {
+	margin-top: 30px;
+    font-size: 24px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 1.3px;
+}
+
+.footer {
+	height: 117px;
+	margin-top: 206px;
+    margin-left: 121px;
+	display: flex;
+}
+
+.web_site {
+	font-size: 24px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.social_group {
+	display: flex;
+	margin-left: 1275px;
+}
+
+.social_network {
+	width: 36px;
+	height: 36px;
+	margin-right: 6px;
+	cursor: pointer;
+}
+
+#instagram {
+	background:url(../images/Instagram.png) center no-repeat;
+	background-size: 28px 28px;
+}
+
+#facebook {
+	background:url(../images/Facebook.png) center no-repeat;
+	background-size: 28px 28px;
+}
+
+#twitter {
+	background:url(../images/Twitter.png) center no-repeat;
+	background-size: 28px 28px;
+}
+
+#WhatsApp {
+	background:url(../images/WhatsApp.png) center no-repeat;
+	background-size: 28px 28px;
+}
