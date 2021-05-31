@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 body {
-	font-family:= 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #003366;
 
 	min-width: 320px;
@@ -173,7 +173,7 @@ body {
     text-align: center;
 }
 
-.authorization_input_name {
+#authorization_input_name {
 	position: relative;
 	left: 0px;
 	top: 0px;
@@ -190,7 +190,7 @@ body {
     padding-left: 8px;
 }
 
-.authorization_input_name:focus + .authorization_input_label{
+#authorization_input_name:focus + .authorization_input_label{
 	color: transparent;
 }
 
@@ -212,30 +212,48 @@ body {
     text-align: center;
 
     margin-bottom: 9px;
+    cursor: pointer;
 }
 
 .city_informations{
 	display: inline-flex;
+    margin-left: 300px;
+	top: 0px;
+}
+
+.city_name{
+	display: flex;
     left: 200px;
 	top: 0px;
 }
 
-.city_informations2{
-	display: inline;
-    margin-left: 200px;
-	top: 0px;
-}
-
-.city_name_text{
-	display: inline-flex;
+#city_name_text{
     position: relative;
     left: 15px;
 	top: 0px;
 }
 
-.city_name{
-	display: inline-flex;
+.city_population{
+	display: flex;
     left: 200px;
+	top: 0px;
+}
+
+#city_population_text{
+    position: relative;
+    left: 15px;
+	top: 0px;
+}
+
+.city_temperature{
+	display: flex;
+    left: 200px;
+	top: 0px;
+}
+
+#city_temperature_text{
+    position: relative;
+    left: 15px;
 	top: 0px;
 }
 
@@ -345,19 +363,23 @@ body {
 }
 
 .authorization_text{
-	font-size: 24px;
+	font-size: 14px;
 }
 
 .authorization_input_group{
 	width: 100%;
 }
 
-.authorization_input_name{
+#authorization_input_name{
 	width: 100%;
 }
 
 .authorization_button1{
 	width: 100%;
+}
+
+.city_informations {
+	margin-left: 0px;
 }
 
 .header_nav {

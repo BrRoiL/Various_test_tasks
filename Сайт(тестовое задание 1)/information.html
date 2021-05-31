@@ -9,13 +9,22 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<script src="script.js"></script>
 		<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.6.4'></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(
 				function (){
-					$(".authorization_input_name").on("input keyup",
+					var InputName = localStorage["InputName"];
+					var ButtonActive = false;
+
+					if($(".user_text").val() != "Привет Аноним!"){
+						document.getElementById('user_text').innerHTML = "Привет " + InputName + "!";
+					}
+					else{
+						document.getElementById('user_text').innerHTML = "Привет Аноним!";
+					}
+
+					$("#authorization_input_name").on("input keyup",
 						function(){
 							if($(this).val() != ''){
 								$(".authorization_input_label").css("color", "transparent");
@@ -28,7 +37,67 @@
 
 					$(".authorization_button1").click(
 						function(){
-							$(".city_name_text").text($(".authorization_input_name").val());
+							if(ButtonActive == false) {
+								ButtonActive = true;
+								document.getElementById('authorization_input_name').readOnly = true;
+								$(".authorization_button1").css("background", "#fc6e6e");
+
+								var name = $("#authorization_input_name").val();
+								let wikiURL = "https://ru.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&callback=?&page=";
+								let url = wikiURL + name;
+						    	let population_number = "";
+								$.ajax( {
+								    url: url,
+								    type: "GET",
+								    contentType: "application/json; charset=utf-8",
+								    async: false,
+								    dataType: 'jsonp',
+								    success: function(data) {
+									    try {
+									    	let markup = data.parse.text["*"];
+									    	let markup_html = $("<div></div>").html(markup);
+									    	let population = markup_html.find(".nowrap").text();
+									    	let population_text = population.replace(/[a-zа-яё↘↗&]/gi, "");
+									    	for (var i = 0; i <= population_text.length - 1; i++) {
+									    		if(population_text[i] != "[" && population_text[i] != "(") {
+									    			population_number += population_text[i];
+									    		}
+									    		else {
+									    			break;
+									    		}
+									    	}
+											wikiURL = "http://api.openweathermap.org/data/2.5/weather?appid=3c0da6032f5441c3e3574755b4a5bcdc&units=metric&q=";
+											url = wikiURL + name;
+											$.ajax( {
+											    url: url,
+											    type: "GET",
+											    contentType: "application/json; charset=utf-8",
+											    async: false,
+											    dataType: 'jsonp',
+											    success: function(data) {
+													document.getElementById('city_population_text').innerHTML = population_number + " человек";
+													$("#city_name_text").text($("#authorization_input_name").val());
+											    	document.getElementById('city_temperature_text').innerHTML = data.main.temp.toFixed(0) + "C";
+
+											    	ButtonActive = false;
+											    	$(".authorization_button1").css("background", "#6ecdfc");
+											    	document.getElementById('authorization_input_name').readOnly = false;
+											    }
+											});
+								    	} catch(e) {
+								    		$("#authorization_input_name").val("");
+								    		$(".authorization_input_label").css("color", "#d2d4d6");
+								    		document.getElementById('city_name_text').innerHTML = "";
+								    		document.getElementById('city_population_text').innerHTML = "";
+								    		document.getElementById('city_temperature_text').innerHTML = "";
+
+								    		ButtonActive = false;
+								    		$(".authorization_button1").css("background", "#6ecdfc");
+								    		document.getElementById('authorization_input_name').readOnly = false;
+								    	}
+								    }
+								});
+							}
 						}
 					);
 
@@ -51,8 +120,7 @@
 							return false;
 						}
 					);
-				}
-			);
+			});
 		</script>
 	</head>
 
@@ -71,7 +139,7 @@
 							<a class="header_nav_link" href="#">Задание 6</a>
 						</nav>
 						<div class="user_logo"></div>
-						<div class="user_text">Привет Аноним!</div>
+						<div id="user_text" class="user_text">Привет Аноним!</div>
 						<div class="menu_logo"></div>
 					</div>
 
@@ -85,18 +153,18 @@
 					</nav>
 
 					<div class="authorization">
-						<div class="authorization_text">Город
+						<div class="authorization_text">
 							<div class="city_informations">
-								<div class="city_informations2">
-									<div class="city_name">Название города: <div class="city_name_text"></div></div>
-									<div class="city_population">Размер населения:</div>
-									<div class="city_temperature">Температура в городе:</div>
+								<div>
+									<div class="city_name">Название города:&nbsp; <div id="city_name_text"></div></div>
+									<div class="city_population">Размер населения: <div id="city_population_text"></div></div>
+									<div  class="city_temperature">Температура в городе: <div id="city_temperature_text"></div></div>
 								</div>
 							</div>
 						</div>
 						<div class="authorization_input_group">
-							<input type="text" class="authorization_input_name" name="name"></input >
-							<label class="authorization_input_label">Ваше имя</label>
+							<input type="text" id="authorization_input_name" name="name"></input >
+							<label class="authorization_input_label">Название города</label>
 						</div>
 
 						<div class="authorization_button1">ПОКАЗАТЬ</div>

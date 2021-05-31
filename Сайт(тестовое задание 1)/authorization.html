@@ -14,6 +14,15 @@
 		<script type="text/javascript">
 			$(document).ready(
 				function (){
+					var InputName = localStorage["InputName"];
+
+					if($(".user_text").val() != "Привет Аноним!"){
+						document.getElementById('user_text').innerHTML = "Привет " + InputName + "!";
+					}
+					else{
+						document.getElementById('user_text').innerHTML = "Привет Аноним!";
+					}
+
 					$(".authorization_input_name").on("input keyup",
 						function(){
 							if($(this).val() != ''){
@@ -27,25 +36,17 @@
 
 					$(".authorization_button1").click(
 						function(){
-							if($(".authorization_input_name").val() == ""){
-								document.getElementById('user_text').innerHTML = "Привет Аноним!";
-							}
-							else{
-								document.getElementById('user_text').innerHTML = "Привет " + $(".authorization_input_name").val() + "!";
-							}
-
+							InputName = $(".authorization_input_name").val();
+							localStorage["InputName"] = InputName;
+							document.getElementById('user_text').innerHTML = "Привет " + $(".authorization_input_name").val() + "!";
 						}
 					);
 
 					$(".authorization_button2").click(
 						function(){
-							if($(".authorization_input_name").val() == ""){
-								document.getElementById('user_text').innerHTML = "Привет Аноним!";
-							}
-							else{
-								document.getElementById('user_text').innerHTML = "Привет " + $(".authorization_input_name").val() + "!";
-							}
-
+							InputName = $(".authorization_input_name").val();
+							localStorage["InputName"] = InputName;
+							document.getElementById('user_text').innerHTML = "Привет " + $(".authorization_input_name").val() + "!";
 						}
 					);
 
@@ -105,7 +106,7 @@
 						<div class="authorization">
 							<div class="authorization_text">Авторизация</div>
 							<div class="authorization_input_group">
-								<input type="text" class="authorization_input_name" name="name"></input >
+								<input type="text" class="authorization_input_name" name="InputName"></input >
 								<label class="authorization_input_label">Ваше имя</label>
 							</div>
 

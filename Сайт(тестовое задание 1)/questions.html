@@ -14,6 +14,15 @@
 		<script type="text/javascript">
 			$(document).ready(
 				function (){
+					var InputName = localStorage["InputName"];
+
+					if($(".user_text").val() != "Привет Аноним!"){
+						document.getElementById('user_text').innerHTML = "Привет " + InputName + "!";
+					}
+					else{
+						document.getElementById('user_text').innerHTML = "Привет Аноним!";
+					}
+
 					$(".authorization_input_name").blur(
 						function(){
 							if($(this).val() != ''){
@@ -69,7 +78,7 @@
 							<a class="header_nav_link" href="information.html">Задание 6</a>
 						</nav>
 						<div class="user_logo"></div>
-						<div class="user_text">Привет Аноним!</div>
+						<div id="user_text" class="user_text">Привет Аноним!</div>
 						<div class="menu_logo"></div>
 					</div>
 
